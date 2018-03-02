@@ -106,7 +106,7 @@ def nearcorr(A, tol=[], flag=0, max_iterations=100, n_pos_eig=0,
 
         Xold = copy(X)
         R = X - ds
-        R_wtd = Whalf*R
+        R_wtd = np.multiply(Whalf,R)
         if flag == 0:
             X = proj_spd(R_wtd)
         elif flag == 1:
